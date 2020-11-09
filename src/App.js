@@ -1,11 +1,17 @@
-
 import './App.css';
+
+import { Route, Router } from "react-router-dom";
+
+import Landing from "./pages/Landing";
+import Navbar from "./components/Navbar";
 
 function App() {
   return (
     <div className="App">
-      <h1>cardmarket</h1>
+      
+      <Landing />
     </div>
+    
   );
 }
 
