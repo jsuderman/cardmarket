@@ -12,10 +12,10 @@ export default class Navigation extends Component {
             <Nav className="mr-auto">
               <Nav.Link href="#home">Home</Nav.Link>
               <Nav.Link href="#link">Cart</Nav.Link>
-              <NavDropdown title="Cards" id="basic-nav-dropdown">
-                <NavDropdown.Item href="#action/3.1">Football</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.2">Baseball</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">Basketball</NavDropdown.Item>
+              <NavDropdown title="Sneakers" id="basic-nav-dropdown">
+                <NavDropdown.Item href="#action/3.1">Nike</NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.2">Adidas</NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.3">Under Armour</NavDropdown.Item>
                 <NavDropdown.Divider />
                 <NavDropdown.Item href="#action/3.4">Comic/Game Cards</NavDropdown.Item>
               </NavDropdown>
