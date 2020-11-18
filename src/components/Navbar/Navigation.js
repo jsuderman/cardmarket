@@ -21,6 +21,37 @@ function Navigation() {
 
       </div>
       
+      <div className="header__nav">
+        <Link to="/login" className="header__link">
+          <div className="header__option">
+            <span className="header__optionLineOne"> 1st line </span>
+            <span className="header__optionLineTwo"> sign in </span>
+          </div>
+        </Link>
+
+        <Link to="/login" className="header__link">
+          <div className="header__option">
+            <span className="header__optionLineOne"> 1st line </span>
+            <span className="header__optionLineTwo"> sign in </span>
+          </div>
+        </Link>
+
+        <Link to="/login" className="header__link">
+          <div className="header__option">
+            <span className="header__optionLineOne"> 1st line </span>
+            <span className="header__optionLineTwo"> sign in </span>
+          </div>
+        </Link>
+
+        <Link to="/checkout" className="header__link">
+          <div className="header__optionCart">
+            <FontAwesomeIcon className="header__shoppingCartIcon" icon="shopping-cart" />
+            <span className="header__optionLineTwo header__cartCount" >0</span>
+          </div>
+        </Link>
+
+
+      </div>
 
       
       
