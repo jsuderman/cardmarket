@@ -1,15 +1,32 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Route, Router } from "react-router-dom";
+import "./App.css";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import "./components/FontawesomeIcons/index"
 
-import Landing from "./pages/Landing";
+import Navigation from "./components/Navbar/Navigation";
+
+// import Landing from "./pages/Landing";
 
 
 function App() {
   return (
-    <div className="App">
-      
-      <Landing />
+    <Router>
+      <div className="app">
+        <Switch>
+          <Route path="/checkout">
+            <h1>checkout</h1>
+          </Route>
+          <Route path="/login">
+            <h1>login</h1>
+          </Route>
+          <Route path="/">
+            <Navigation />
+            <h1>home page</h1>
+          </Route>
+        </Switch>
     </div>
+    </Router>
+    
     
   );
 }

@@ -1,23 +1,16 @@
-import React, { Component } from 'react';
-import { Card, Button} from "react-bootstrap";
+import React from 'react';
+import { Card } from "react-bootstrap";
 
-export default class Cards extends Component {
-    render() {
+function Cards(props) {
+    
         return (
             <div>
                 <Card style={{ width: '18rem' }}>
-                    <Card.Img variant="top" src="holder.js/100px180" />
-                    <Card.Body>
-                        <Card.Title>Card Title</Card.Title>
-                        <Card.Text>
-                            Some quick example text to build on the card title and make up the bulk of
-                            the card's content.
-                        </Card.Text>
-                        <Button variant="primary">Add to cart</Button>
-                        <Button variant="primary">Save</Button>
-                    </Card.Body>
+                    <h1>{props.title}</h1>
                 </Card>
             </div>
         )
-    }
+    
 }
+
+export default Cards; 
