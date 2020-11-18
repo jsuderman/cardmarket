@@ -17,7 +17,7 @@ function Navigation() {
 
       <div className="header__search">
         <input type="text" className="header__searchInput" />
-        <FontAwesomeIcon icon="search" />
+        <FontAwesomeIcon className="header__searchIcon" icon="search" />
 
       </div>
       
