@@ -1,5 +1,5 @@
 .header {
-    background-color: aqua;
+    background-color: black;
     display: flex;
     align-items: center;
     position: sticky;   
@@ -41,7 +41,7 @@
 }
 
 .header__link {
-    color: black;
+    color: white;
     text-decoration: none;
 }
 
