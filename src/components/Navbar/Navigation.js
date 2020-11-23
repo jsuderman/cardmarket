@@ -2,9 +2,15 @@ import React from 'react';
 import "./Navigation.css";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { useStateValue } from '../StateProvider/StateProvider';
 
 
 function Navigation() {
+  const [{ cart }] = useStateValue();
+
+  console.log(cart);
+
+
   return (
     <nav className="header">
       <Link to="/">
@@ -46,7 +52,7 @@ function Navigation() {
         <Link to="/checkout" className="header__link">
           <div className="header__optionCart">
             <FontAwesomeIcon className="header__shoppingCartIcon" icon="shopping-cart" />
-            <span className="header__optionLineTwo header__cartCount" >0</span>
+            <span className="header__optionLineTwo header__cartCount">{cart?.length}</span>
           </div>
         </Link>
 

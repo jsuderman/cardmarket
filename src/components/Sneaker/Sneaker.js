@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import "./Sneaker.css";
 import Cards from "../Card/Card";
 
-
 function Sneakers(props) {
 
     const [sneakers, setSneakers] = useState([]);
@@ -15,21 +14,16 @@ function Sneakers(props) {
     
     return (
         <div>
-            {/* <ul>
-                {sneakers.map((shoe) => {
-                    return <li key={shoe.id}> {shoe.retailPrice} </li>
-                })}
-            </ul> */}
+            
             <div>
                 {sneakers.map(sneaker => (
-                    <Cards sneaker={sneaker}/>
+                    <Cards sneaker={sneaker} />
                 ))}
-                
-                
-                
-                
-
             </div>
+
+            
+            
+            
             
         </div>
     )
