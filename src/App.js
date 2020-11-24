@@ -6,6 +6,7 @@ import "./components/FontawesomeIcons/index"
 
 import Navigation from "./components/Navbar/Navigation";
 import Home from "./components/Home/Home";
+import Checkout from "./components/Checkout/Checkout";
 import Login from "./components/Login/Login";
 import { auth } from "./components/Firebase/firebase";
 import { useStateValue } from "./components/StateProvider/StateProvider";
@@ -50,7 +51,7 @@ function App() {
 
           <Route path="/checkout">
             <Navigation />
-            <h1>checkout</h1>
+            <Checkout />
           </Route>
 
           <Route path="/login">

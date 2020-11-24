@@ -7,13 +7,15 @@ import { useStateValue } from "../StateProvider/StateProvider";
 
 const Cards = (props) => {
 
-    const [ {cart} ,dispatch ] = useStateValue();
+    const [ { cart } ,dispatch ] = useStateValue();
 
     const addToCart = () => {
         dispatch({
             type: "ADD_TO_CART",
             item: {
                 title: props.sneaker.title,
+                price: props.sneaker.retailPrice,
+                image: props.sneaker.media.thumbUrl,
             },
         });
     };

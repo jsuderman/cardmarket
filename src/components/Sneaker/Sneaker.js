@@ -17,7 +17,7 @@ function Sneakers(props) {
             
             <div>
                 {sneakers.map(sneaker => (
-                    <Cards sneaker={sneaker} />
+                    <Cards sneaker={sneaker} key={sneaker.id}/>
                 ))}
             </div>
 
