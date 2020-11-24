@@ -3,12 +3,17 @@ import "./Navigation.css";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useStateValue } from '../StateProvider/StateProvider';
+import { auth } from '../Firebase/firebase';
 
 
 function Navigation() {
-  const [{ cart }] = useStateValue();
+  const [{ cart, user }] = useStateValue();
 
-  console.log(cart);
+  const login = () => {
+    if (user) {
+      auth.signOut();
+    }
+  }
 
 
   return (
@@ -28,7 +33,14 @@ function Navigation() {
       </div>
       
       <div className="header__nav">
-        <Link to="/login" className="header__link">
+        <Link to={"/login"} className="header__link">
+          <div onClick={login} className="header__option">
+            <span className="header__optionLineOne"> Welcome {user?.email}</span>
+            <span className="header__optionLineTwo">{user ? "Sign out" : "Sign In"}</span>
+          </div>
+        </Link>
+
+        {/* <Link to="/login" className="header__link">
           <div className="header__option">
             <span className="header__optionLineOne"> 1st line </span>
             <span className="header__optionLineTwo"> sign in </span>
@@ -40,14 +52,7 @@ function Navigation() {
             <span className="header__optionLineOne"> 1st line </span>
             <span className="header__optionLineTwo"> sign in </span>
           </div>
-        </Link>
-
-        <Link to="/login" className="header__link">
-          <div className="header__option">
-            <span className="header__optionLineOne"> 1st line </span>
-            <span className="header__optionLineTwo"> sign in </span>
-          </div>
-        </Link>
+        </Link> */}
 
         <Link to="/checkout" className="header__link">
           <div className="header__optionCart">

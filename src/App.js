@@ -16,7 +16,7 @@ import { useStateValue } from "./components/StateProvider/StateProvider";
 
 
 function App() {
-  const [{ cart }, dispatch] = useStateValue();
+  const [{ user }, dispatch] = useStateValue();
 
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((authUser) => {
@@ -42,6 +42,7 @@ function App() {
 
   }, []); 
 
+  console.log("user is >>>>>>", user);
     
 
   return (
