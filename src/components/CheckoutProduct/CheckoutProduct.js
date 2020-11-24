@@ -11,7 +11,7 @@ function CheckoutProduct({ id,image,title, price }) {
 
         dispatch({
             type: "REMOVE_FROM_CART",
-            title: title,
+            id: id,
         });
     }
 

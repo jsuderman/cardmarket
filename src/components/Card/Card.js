@@ -16,6 +16,7 @@ const Cards = (props) => {
                 title: props.sneaker.title,
                 price: props.sneaker.retailPrice,
                 image: props.sneaker.media.thumbUrl,
+                id: props.sneaker.id,
             },
         });
     };
