@@ -5,7 +5,7 @@ import CheckoutProduct from "../CheckoutProduct/CheckoutProduct";
 
 function Checkout() {
 
-    const [{ cart  }] = useStateValue();
+    const [{ cart }] = useStateValue();
 
     return (
         <div className="checkout">
@@ -25,11 +25,11 @@ function Checkout() {
 
                     {cart.map(item => (
                         <CheckoutProduct 
-                        item={item.id}
+                        id={item.title}
                         price={item.price}
                         image={item.image}
                         title={item.title}
-                        
+                        key={item.title}
                         />
                     ))}
                 </div>
