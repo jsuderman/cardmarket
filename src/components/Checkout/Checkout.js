@@ -4,6 +4,7 @@ import "./Checkout.css";
 import CheckoutProduct from "../CheckoutProduct/CheckoutProduct";
 import Subtotal from "../Subtotal/Subtotal"
 
+
 function Checkout() {
 
     const [{ cart }] = useStateValue();
@@ -40,7 +41,9 @@ function Checkout() {
             {cart.length > 0 && (
             <div className="checkout__right">
                 
-                <Subtotal />
+                <Subtotal 
+                
+                />
             </div>
         )}                        
         </div>

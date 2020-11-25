@@ -12,7 +12,7 @@ import { auth } from "./components/Firebase/firebase";
 import { useStateValue } from "./components/StateProvider/StateProvider";
 
 
-// import Landing from "./pages/Landing";
+
 
 
 function App() {
@@ -40,7 +40,7 @@ function App() {
       unsubscribe();
     };
 
-  }, []); 
+  }, [dispatch]); 
 
   console.log("user is >>>>>>", user);
     
