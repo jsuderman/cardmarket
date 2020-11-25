@@ -1,19 +1,48 @@
-import React from 'react';
+import React, { useState } from 'react';
 import "./Navigation.css";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useStateValue } from '../StateProvider/StateProvider';
 import { auth } from '../Firebase/firebase';
+// import axios from "./axios"
 
 
-function Navigation() {
+
+function Navigation(props) {
   const [{ cart, user }] = useStateValue();
+  const [searchValue, setSearchValue]= useState("");
+    
 
   const login = () => {
     if (user) {
       auth.signOut();
     }
   }
+
+
+
+  // const handleSubmit = (event) => {
+  //   event.preventDefault();
+
+
+  // }
+
+  const handleInputChange = (event) => {
+    event.preventDefault();
+    setSearchValue(event.target.value)
+  }
+  
+  const resetInputField = () => {
+    setSearchValue("")
+  }
+
+  const callSearchFunction = (e) => {
+    e.preventDefault();
+    props.Navigation(searchValue);
+    resetInputField();
+  }
+
+  
 
 
   return (
@@ -27,8 +56,14 @@ function Navigation() {
       </Link>
 
       <div className="header__search">
-        <input type="text" className="header__searchInput" />
-        <FontAwesomeIcon className="header__searchIcon" icon="search" />
+        <input 
+          type="text" 
+          className="header__searchInput" 
+          value={searchValue}
+          onChange={handleInputChange}
+          placeholder="Search Brand Here"
+          />
+        <button type="submit" onSubmit={callSearchFunction} className="header__searchIcon" icon="search">Search</button>
 
       </div>
       

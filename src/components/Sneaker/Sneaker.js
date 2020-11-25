@@ -6,7 +6,7 @@ function Sneakers(props) {
 
     const [sneakers, setSneakers] = useState([]);
     useEffect(() => {
-        fetch("https://api.thesneakerdatabase.com/v1/sneakers?limit=10")
+        fetch("https://api.thesneakerdatabase.com/v1/sneakers?limit=20")
         .then(response => response.json())
         .then(data => setSneakers(data.results)); 
     }, []);

@@ -29,10 +29,12 @@
 }
 
 .header__searchIcon {
-    background-color:white;
-    padding: 5px;
+    background-color: white;
+    border: black;
+    border-radius: 1px;
+    border-color: black;
     height: 24px;
-    width: 10px;
+    width: 75px;
 }
 
 .header__nav {

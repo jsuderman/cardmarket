@@ -4,9 +4,23 @@ import CardContainer from "../CardContainer/CardContainer";
 
 
 
+
 function Home() {
 
-
+    // const [ brands, setBrands ] = useState([]);
+    // const [ loading, setLoading ] = useState(true);
+    // const [ errorMessage, setErrorMessage ] = useState(null);
+  
+    // useEffect(() => {
+    //   fetch(BrandURL + S)
+    //   .then(response => response.json())
+    //   console.log(response.json)
+    //   .then(jsonResponse => {
+    //     setBrands(jsonResponse.Search);
+    //     setLoading(false);
+    //   });
+  
+    // }, []);
 
 
 

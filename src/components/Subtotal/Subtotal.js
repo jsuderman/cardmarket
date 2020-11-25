@@ -6,6 +6,7 @@ import { getCartTotal } from '../Reducer/reducer';
 
 function Subtotal() {
     const [ { cart } , dispatch] = useStateValue();
+
     return (
         <div className="subtotal">
             
