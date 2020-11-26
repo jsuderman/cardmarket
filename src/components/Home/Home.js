@@ -28,7 +28,7 @@ function Home() {
         <div className="home">
             <img
                 className="home__image"
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-YvqpPDUXrzCt3A4B88dHjGBD7brH2iwuLA&usqp=CAU"
+                src="https://images.unsplash.com/photo-1579298245158-33e8f568f7d3?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8bmlrZXxlbnwwfHwwfA%3D%3D&auto=format&fit=crop&w=800&q=60"
                 alt="sneakerStore"
             />
             
